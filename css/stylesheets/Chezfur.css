@@ -5,17 +5,37 @@ body{
   }
   
   /* div is the targeted element in the .HTML file to make the background color saddlbrown and the text color gainsborow*/
-  div {
+  main {
     background-color: saddlebrown;
     color: gainsboro;
+    .responsive { /* responsiveness */
+      max-width: 100%;
+      height: auto;
+    }
   }
-
-/*media screen is equal to or greater than 750ppx is applied the background color and font color*/
+/*media screen is equal to or greater than 750px is applied the background color and font color*/
 
   @media screen and (min-width: 750px) {
   body {
     background-color:maroon;
     color:moccasin;
-    font-family: 'Times New Roman', Times, serif; 
+  font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .header {
+    background-image: url('/images/LogoSmall.png'); /*Direct to image folder directory. Not sure why this is not directing properly to the image folder*/
+    width: auto; /*Auto width*/
+    min-height: 50px; /* Set minimum height to50px */
+    background-position: right top;
+    background-repeat: no-repeat;
   } 
+}
+
+@media screen {
+  .header {
+    background-image: url('/images/LogoLarge.png'); /*Direct to image folder directory. Not sure why this is not directing properly to the image folder*/
+    width: 100%; /* Auto width */
+    min-height: 100px; /* Set minimum height to 100px */
+    background-repeat: no-repeat;
+  }
 }
