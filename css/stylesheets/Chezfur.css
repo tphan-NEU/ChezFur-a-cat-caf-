@@ -1,3 +1,5 @@
+
+
 body{
     background-color: peru;
     color: bisque;
@@ -8,34 +10,29 @@ body{
   main {
     background-color: saddlebrown;
     color: gainsboro;
-    .responsive { /* responsiveness */
-      max-width: 100%;
-      height: auto;
-    }
-  }
-/*media screen is equal to or greater than 750px is applied the background color and font color*/
 
-  @media screen and (min-width: 750px) {
+    }
+  
+
+  @media screen and (min-width: 750px) { /*media screen is equal to or greater than 750px is applied the background color and font color*/
   body {
     background-color:maroon;
     color:moccasin;
   font-family: 'Times New Roman', Times, serif;
   }
-  
-  .header {
-    background-image: url('/images/LogoSmall.png'); /*Direct to image folder directory. Not sure why this is not directing properly to the image folder*/
-    width: auto; /*Auto width*/
-    min-height: 50px; /* Set minimum height to50px */
-    background-position: right top;
+  header {
+    background-image: url('../../images/LogoSmall.png'); 
     background-repeat: no-repeat;
-  } 
+    background-position: top right;
+    min-height: 50px;
+  }
 }
 
-@media screen {
-  .header {
-    background-image: url('/images/LogoLarge.png'); /*Direct to image folder directory. Not sure why this is not directing properly to the image folder*/
-    width: 100%; /* Auto width */
-    min-height: 100px; /* Set minimum height to 100px */
+@media screen and (min-height: 1024px) { /*media screen is equal to or greater than 1024px is applied the background color and font color*/
+  header {
+    background-image: url('../../images/LogoLarge.png'); 
     background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 100px;
   }
 }
