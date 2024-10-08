@@ -1,0 +1,147 @@
+/* COlor choices: I liked the colors here. It's a blend of coziness and calm environment like a rainy day with cats. The orange colors reminds me of calico or orange tabbies. 
+I decided to add #FFFFFF(white) as it was a safe color font choice with the exception of the orange background color. I checked all of the contrast ratios on 
+https://assets.adobe.com/public/a9f1756a-c26e-4737-4438-b71bd6cfa42a/ceff7e26-ae5a-47e3-8f8f-fb7b50c58f71 */
+
+body {
+  background-color: #191C2D;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-image: url('../../images/LogoSmall.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 50px;
+}
+
+
+main {
+  background-color: #007B63;
+  color: #FFFFFF;
+
+  /*Our Hosts Page*/
+  .licat {
+    /* Class identifier for food categories */
+    font-size: 1.875em;
+  }
+  
+  .hostmain {
+    border-radius: 10px;
+    background-color: #F2A533;
+    width: 90%;
+  }
+  
+  figure {
+    /* Target figure & center pictures */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  figure img {
+    border-radius: 50%;
+    /* Makes images oval */
+    width: 70px;
+    height: 70px;
+    /* Height. Tata image was cut off so it's set higher */
+    object-fit: cover;
+    margin: 10px 0;
+  }
+  
+  figcaption {
+    /* Target figcaption */
+    font-weight: bold;
+  }
+}
+
+/* Menu Page main*/
+
+nav a:hover {
+  /* Hover color change*/
+  color: #007B63;
+  text-decoration: underline;
+}
+
+nav a:active {
+  background-color: #FFFFFF;; /* White background when active */
+}
+
+nav a:focus {
+  outline: 2px solid #FFFFFF; /* Outline when clicked*/
+}
+
+.menu {
+  /* Menu backgroudn image*/
+  background-image: url('../../images/Menu_background.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+
+}
+
+.Boldmenuitem {
+  font-weight: bold;
+}
+
+.menudescription {
+  font-style: italic
+}
+
+.warning {
+  text-align: right;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.asidemenu {
+  /*set font to cursive & center*/
+  font-family: 'Brush Script MT', cursive;
+  text-align: center;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  /*media screen is equal to or greater than 1024 px is applied the background color and font color*/
+  body {
+    background-color: #F2A533;
+    color: #191C2D;
+    font-family: 'Times New Roman', Times, serif;
+
+    figure img {
+      /* Target figure in Our Host page to set to 180px */
+      width: 180px;
+      height: 180px;
+    }
+
+  }
+
+  header {
+    background-image: url('../../images/LogoLarge.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 100px;
+  }
+}
+
+aside {
+  width: 30%;
+  padding-left: 20px;
+  margin-left: 20px;
+  float: right;
+  font-style: italic;
+  background-color: #F2C438;
+  color: #191C2D;
+}
+
+@media screen and (max-width: 1024px) {
+
+  /* Target figure in Our Host page to set image size */
+  figure img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    /* Images retain*/
+  }
+}
