@@ -2,21 +2,16 @@
 I decided to add #FFFFFF(white) as it was a safe color font choice with the exception of the orange background color. I checked all of the contrast ratios on 
 https://assets.adobe.com/public/a9f1756a-c26e-4737-4438-b71bd6cfa42a/ceff7e26-ae5a-47e3-8f8f-fb7b50c58f71 */
 
-body {
-  background-color: #191C2D;
-  color: #FFFFFF;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-header {
-  background-image: url('../../images/LogoSmall.png');
-  background-repeat: no-repeat;
-  background-position: top right;
-  min-height: 50px;
-}
+/*Navigation Styling*/
 
+ul {
+  list-style: none;
+  padding: 10px;
+}
 
 main {
+  background-size: cover;
   background-color: #007B63;
   color: #FFFFFF;
 
@@ -25,20 +20,21 @@ main {
     /* Class identifier for food categories */
     font-size: 1.875em;
   }
-  
+
   .hostmain {
     border-radius: 10px;
     background-color: #F2A533;
-    width: 90%;
+    background-size: cover;
+    width: 75%;
   }
-  
+
   figure {
     /* Target figure & center pictures */
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   figure img {
     border-radius: 50%;
     /* Makes images oval */
@@ -48,7 +44,7 @@ main {
     object-fit: cover;
     margin: 10px 0;
   }
-  
+
   figcaption {
     /* Target figcaption */
     font-weight: bold;
@@ -64,19 +60,25 @@ nav a:hover {
 }
 
 nav a:active {
-  background-color: #FFFFFF;; /* White background when active */
+  background-color: #FFFFFF;
+  ;
+  /* White background when active */
 }
 
 nav a:focus {
-  outline: 2px solid #FFFFFF; /* Outline when clicked*/
+  outline: 2px solid #FFFFFF;
+  /* Outline when clicked*/
 }
 
 .menu {
-  /* Menu backgroudn image*/
+  /* Menu background image*/
   background-image: url('../../images/Menu_background.jpeg');
+  background-size: cover;
+  width: 75%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 50%;
+  border-radius: 10px;
+  padding: 10px;
 
 }
 
@@ -98,44 +100,124 @@ nav a:focus {
   /*set font to cursive & center*/
   font-family: 'Brush Script MT', cursive;
   text-align: center;
+  padding: 15px;
+  margin-top: 35px;
+  border-radius: 10px;
+  width: 25%;
 
 }
 
 @media screen and (min-width: 1024px) {
+  /* Nav for large screen*/
 
-  /*media screen is equal to or greater than 1024 px is applied the background color and font color*/
-  body {
-    background-color: #F2A533;
-    color: #191C2D;
-    font-family: 'Times New Roman', Times, serif;
-
-    figure img {
-      /* Target figure in Our Host page to set to 180px */
-      width: 180px;
-      height: 180px;
-    }
-
+  /* Create two unequal columns that floats next to each other */
+  .navmenu {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin-bottom: -25px;
+    margin-top: -25px;
   }
 
   header {
-    background-image: url('../../images/LogoLarge.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    min-height: 100px;
+    width: auto;
+  }
+
+  nav {
+    margin-left: -10px;
+  }
+
+  .menuimage {
+    padding: 35px;
+    margin-top: 35px;
   }
 }
 
+.asidemenu {
+  float: left;
+  width: 25%;
+  margin-left: -15px;
+  padding: 15px;
+  clear: left;
+
+}
+
+footer {
+  float: left;
+  padding: 0%;
+  width: 25%;
+  height: 20x;
+  clear: left;
+  margin-left: -5px;
+  text-align: center;
+  /* Center text*/
+}
+
+/* Nav List Styling with button borders*/
+li a {
+  display: block;
+  width: 100px;
+  background-color: #dddddd;
+  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: solid;
+
+}
+
+/*media screen is equal to or greater than 1024 px is applied the background color and font color*/
+body {
+  background-color: #F2A533;
+  color: #191C2D;
+  font-family: 'Times New Roman', Times, serif;
+
+  figure img {
+    /* Target figure in Our Host page to set to 180px */
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+header {
+  background-image: url('../../images/LogoLarge.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 100px;
+}
+
+
 aside {
+  /* Aside Menu Config */
   width: 30%;
-  padding-left: 20px;
+  padding-left: 15x;
   margin-left: 20px;
   float: right;
   font-style: italic;
   background-color: #F2C438;
   color: #191C2D;
+  border: solid;
 }
 
 @media screen and (max-width: 1024px) {
+
+
+  header {
+    background-image: url('../../images/LogoSmall.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 50px;
+  }
+
+  body {
+    background-color: #191C2D;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
   /* Target figure in Our Host page to set image size */
   figure img {
@@ -143,5 +225,42 @@ aside {
     height: 80px;
     object-fit: cover;
     /* Images retain*/
+
+  }
+
+  /* Small screen navigation button styling */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+  }
+
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  li a {
+    min-width: 50px;
+    background-color: #dddddd;
+    margin: 5px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid;
+
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+
+  main {
+    margin-top: 20px;
+    /*Margin space for small screen*/
   }
 }
