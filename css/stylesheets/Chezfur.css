@@ -3,13 +3,6 @@ I decided to add #FFFFFF(white) as it was a safe color font choice with the exce
 https://assets.adobe.com/public/a9f1756a-c26e-4737-4438-b71bd6cfa42a/ceff7e26-ae5a-47e3-8f8f-fb7b50c58f71 */
 
 
-/*Navigation Styling*/
-
-ul {
-  list-style: none;
-  padding: 10px;
-}
-
 main {
   background-size: cover;
   background-color: #007B63;
@@ -21,6 +14,17 @@ main {
     font-size: 1.875em;
   }
 
+  .cat_gallery {
+    /* Flexbox for cats */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: fit-content;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+  }
+
   .hostmain {
     border-radius: 10px;
     background-color: #F2A533;
@@ -28,11 +32,12 @@ main {
     width: 75%;
   }
 
-  figure {
-    /* Target figure & center pictures */
+  .logocontainer {
+    /* Flexbox for sponsors*/
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
   }
 
   figure img {
@@ -42,12 +47,12 @@ main {
     height: 70px;
     /* Height. Tata image was cut off so it's set higher */
     object-fit: cover;
-    margin: 10px 0;
   }
 
   figcaption {
     /* Target figcaption */
     font-weight: bold;
+    margin-top: 5px;
   }
 }
 
@@ -61,7 +66,6 @@ nav a:hover {
 
 nav a:active {
   background-color: #FFFFFF;
-  ;
   /* White background when active */
 }
 
@@ -78,7 +82,7 @@ nav a:focus {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
 
 }
 
@@ -111,6 +115,14 @@ nav a:focus {
   /* Nav for large screen*/
 
   /* Create two unequal columns that floats next to each other */
+
+  .wrapper {
+    /*Sidebar*/
+    display: flex;
+    height: 100vh;
+    overflow: scroll;
+  }
+
   .navmenu {
     float: left;
     width: 30%;
@@ -146,19 +158,29 @@ footer {
   float: left;
   padding: 0%;
   width: 25%;
-  height: 20x;
+  height: 20px;
   clear: left;
   margin-left: -5px;
   text-align: center;
   /* Center text*/
 }
 
-/* Nav List Styling with button borders*/
-li a {
+/* Nav container for small screens*/
+
+.navcontainer {
+  display: flex;
+  flex-direction: column;
+  /* Display items in collumn*/
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.navcontainer a {
+  /* replaced li a*/
   display: block;
   width: 100px;
   background-color: #dddddd;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   padding: 10px;
   border-radius: 15px;
@@ -166,7 +188,6 @@ li a {
   font-weight: bold;
   text-decoration: none;
   border: solid;
-
 }
 
 /*media screen is equal to or greater than 1024 px is applied the background color and font color*/
@@ -177,8 +198,9 @@ body {
 
   figure img {
     /* Target figure in Our Host page to set to 180px */
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
   }
 
 }
@@ -229,19 +251,18 @@ aside {
   }
 
   /* Small screen navigation button styling */
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 15px;
+
+  .navcontainer {
+    /* Replaced li to container*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    /* Display items in a row*/
   }
 
-
-  li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-
-  li a {
+  .navcontainer a {
+    /* replaced li a to container a*/
     min-width: 50px;
     background-color: #dddddd;
     margin: 5px;
@@ -252,11 +273,6 @@ aside {
     font-weight: bold;
     text-decoration: none;
     border: solid;
-
-  }
-
-  nav {
-    margin-top: 20px;
   }
 
   main {
