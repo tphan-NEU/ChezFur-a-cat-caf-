@@ -114,6 +114,47 @@ nav a:focus {
 @media screen and (min-width: 1024px) {
   /* Nav for large screen*/
 
+  /*Adoptions Page*/
+
+  .catgridcontainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /*5 columns*/
+    grid-template-rows: repeat(3, auto);
+    /* 3 rows */
+    gap: 10px;
+    padding: 10px;
+    background-color: #007B63;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .grid-item {
+    border: 5px solid #191C2D;
+    /* Item Borders */
+    border-radius: 8px;
+    /* Round corners*/
+  }
+
+
+  .grid-image {
+    /* Target image items to be responsive, auto to heightm and marg-bottom to fit into the black borders */
+    width: 100%;
+    height: auto;
+    Display: flex;
+    /* Fit images */
+  }
+
+  .gridlong {
+    grid-column: span 6;
+    /* Span the top grid item to the very top, while the other items are on the bottom */
+    border: 5px solid #191C2D;
+    /* Item border for long*/
+    border-radius: 8px;
+    /* Round corners*/
+  }
+
+
   /* Create two unequal columns that floats next to each other */
 
   .wrapper {
@@ -278,5 +319,72 @@ aside {
   main {
     margin-top: 20px;
     /*Margin space for small screen*/
+
+
+    .catgridcontainer {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      /*5 columns*/
+      grid-template-rows: repeat(3, auto);
+      /* 3 rows */
+      gap: 10px;
+      padding: 10px;
+      background-color: #007B63;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      /*Adoptions Page small*/
+
+      .catgridcontainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /*5 columns*/
+        grid-template-rows: repeat(3, auto);
+        /* 3 rows */
+        gap: 10px;
+        padding: 10px;
+        background-color: #007B63;
+      }
+
+      .catgridcontainer {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        /* 3 columns */
+        grid-template-rows: repeat(2, auto) 1fr;
+        /* 2 rows for items, 1 row for gridlong */
+        gap: 10px;
+        /* Adjust as needed */
+
+      }
+
+      .grid-item {
+        border: 5px solid #191C2D;
+        /* Item Borders */
+        display: flex;
+        /* Enable flexbox for centering */
+        border-radius: 8px;
+        /* Round corners*/
+      }
+
+      .grid-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .gridlong {
+        grid-column: span 6;
+        /* Span 6 columns. I wanted to keep it at 3, but it didn't look good or aligned*/
+        grid-row: 3;
+        /* Long image is placed on 3rd row */
+        border: 5px solid #191C2D;
+        /* Item border for long */
+        display: flex;
+        /* Flexbox to cover the box */
+        border-radius: 8px;
+        /* Round corners*/
+
+      }
+    }
+
   }
 }
