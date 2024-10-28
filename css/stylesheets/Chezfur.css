@@ -320,38 +320,27 @@ aside {
     margin-top: 20px;
     /*Margin space for small screen*/
 
-
-    .catgridcontainer {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      /*5 columns*/
-      grid-template-rows: repeat(3, auto);
-      /* 3 rows */
-      gap: 10px;
-      padding: 10px;
-      background-color: #007B63;
-      margin-top: 10px;
-      margin-bottom: 10px;
-
       /*Adoptions Page small*/
 
       .catgridcontainer {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         /*5 columns*/
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
         /* 3 rows */
         gap: 10px;
         padding: 10px;
         background-color: #007B63;
+        margin-top: 10px;
+        margin-bottom: 10px;  
       }
 
       .catgridcontainer {
         display: grid;
-        grid-template-columns: repeat(3, auto);
-        /* 3 columns */
+        grid-template-columns: repeat(2, auto);
+        /* 2 columns */
         grid-template-rows: repeat(2, auto) 1fr;
-        /* 2 rows for items, 1 row for gridlong */
+        /* 2 rows for items*/
         gap: 10px;
         /* Adjust as needed */
 
@@ -372,10 +361,10 @@ aside {
       }
 
       .gridlong {
-        grid-column: span 6;
-        /* Span 6 columns. I wanted to keep it at 3, but it didn't look good or aligned*/
-        grid-row: 3;
-        /* Long image is placed on 3rd row */
+        grid-column: span 2;
+        /* Span 2*/
+        grid-row: 1;
+        /* Long image is placed on 1st row */
         border: 5px solid #191C2D;
         /* Item border for long */
         display: flex;
@@ -387,4 +376,3 @@ aside {
     }
 
   }
-}
