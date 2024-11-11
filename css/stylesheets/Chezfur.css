@@ -320,59 +320,127 @@ aside {
     margin-top: 20px;
     /*Margin space for small screen*/
 
-      /*Adoptions Page small*/
+    /*Adoptions Page small*/
 
-      .catgridcontainer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /*5 columns*/
-        grid-template-rows: repeat(2, auto);
-        /* 3 rows */
-        gap: 10px;
-        padding: 10px;
-        background-color: #007B63;
-        margin-top: 10px;
-        margin-bottom: 10px;  
-      }
-
-      .catgridcontainer {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        /* 2 columns */
-        grid-template-rows: repeat(2, auto) 1fr;
-        /* 2 rows for items*/
-        gap: 10px;
-        /* Adjust as needed */
-
-      }
-
-      .grid-item {
-        border: 5px solid #191C2D;
-        /* Item Borders */
-        display: flex;
-        /* Enable flexbox for centering */
-        border-radius: 8px;
-        /* Round corners*/
-      }
-
-      .grid-image {
-        width: 100%;
-        height: auto;
-      }
-
-      .gridlong {
-        grid-column: span 2;
-        /* Span 2*/
-        grid-row: 1;
-        /* Long image is placed on 1st row */
-        border: 5px solid #191C2D;
-        /* Item border for long */
-        display: flex;
-        /* Flexbox to cover the box */
-        border-radius: 8px;
-        /* Round corners*/
-
-      }
+    .catgridcontainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /*5 columns*/
+      grid-template-rows: repeat(2, auto);
+      /* 3 rows */
+      gap: 10px;
+      padding: 10px;
+      background-color: #007B63;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
+    .catgridcontainer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      /* 2 columns */
+      grid-template-rows: repeat(2, auto) 1fr;
+      /* 2 rows for items*/
+      gap: 10px;
+      /* Adjust as needed */
+
+    }
+
+    .grid-item {
+      border: 5px solid #191C2D;
+      /* Item Borders */
+      display: flex;
+      /* Enable flexbox for centering */
+      border-radius: 8px;
+      /* Round corners*/
+    }
+
+    .grid-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .gridlong {
+      grid-column: span 2;
+      /* Span 2*/
+      grid-row: 1;
+      /* Long image is placed on 1st row */
+      border: 5px solid #191C2D;
+      /* Item border for long */
+      display: flex;
+      /* Flexbox to cover the box */
+      border-radius: 8px;
+      /* Round corners*/
+
+    }
   }
+
+}
+
+/* Contacts Page*/
+input[type="text"],
+input[type="email"],
+input[type="tel"] select,
+textarea {
+  /* Text Area Fields for large screen*/
+  width: auto;
+  /* Set to auto*/
+  margin: 2px 0;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+main {
+  /* Align bottom and smooth edge*/
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  /* Text Syling*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  /* Button Style */
+  width: 25%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  /* Hover color*/
+  background-color: #45a049;
+}
+
+
+@media (max-width: 1024px) {
+
+  /* Small screen media inquiry */
+  input[type="submit"] {
+    /* Make button smaller and to the left */
+    padding: 15px 15px;
+    width: 25%;
+  }
+
+}
+
+form {
+  /*  Form size*/
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
