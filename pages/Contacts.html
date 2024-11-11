@@ -5,39 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chez Fur</title>
-    <!--Refence the stylesheet .css file-->
+    <!-- Reference the stylesheet .css file -->
     <link rel="stylesheet" href="../css/stylesheets/Chezfur.css">
-
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>Chez Fur</h1>
-            <h2>by Suzy Schaffer</h2>
-        </header>
-        <div class="wrapper">
-            <nav class="sidebar"> <!-- This references the pages from the navigation menu -->
-                <div class="navcontainer"> <!-- Nav container -->
-                    <a href="../index.html">Home</a>
-                    <a href="../pages/Menu.html">Menu</a>
-                    <a href="../pages/Our_Hosts.html">Our Hosts</a>
-                    <a href="../pages/Contacts.html">Contacts</a>
-                    <a href="../pages/Adoptions.html">Adoptions</a>
-                </div>
-            </nav>
-        </div>
-    </main>
+    <header>
+        <h1>Chez Fur</h1>
+        <h2>by Suzy Schaffer</h2>
+    </header>
 
+    <div class="wrapper">
+        <nav class="sidebar"> <!-- This references the pages from the navigation menu -->
+            <div class="navcontainer"> <!-- Nav container -->
+                <a href="../index.html">Home</a>
+                <a href="../pages/Menu.html">Menu</a>
+                <a href="../pages/Our_Hosts.html">Our Hosts</a>
+                <a href="../pages/Contacts.html">Contacts</a>
+                <a href="../pages/Adoptions.html">Adoptions</a>
+            </div>
+        </nav>
+
+        <main>
+            <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <!-- First Name -->
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+
+                <!-- Last Name -->
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+
+                <!-- Email -->
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" placeholder="Email Required" required><br><br>
+
+                <!-- Phone -->
+                <label for="phone">Enter your phone number:</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="617-xxx-xxxx"
+                    required><br><br>
+
+                <!-- Preferred contact -->
+                <label for="preferred-contact">Preferred contact:</label>
+                <select name="preferred-contact" id="preferred-contact">
+                    <option value="emailme" selected>Email me</option>
+                    <option value="Phone me between 1pm – 4pm">Phone me between 1pm – 4pm</option>
+                    <option value="Phone me between 6pm – 9pm">Phone me between 6pm – 9pm</option>
+                </select><br><br>
+
+                <!-- Question or Concern -->
+                <label for="question">Question or Concern?</label><br>
+                <textarea id="question" name="question" rows="8" cols="50" required></textarea><br><br>
+
+                <!-- Submit button -->
+                <input type="submit" value="Send Now">
+            </form>
+        </main>
+    </div>
 
     <footer>
         <p>Copyright &copy; 2024 Suzy Shaffer<br>
-            <!--mail to tag-->
+            <!-- mailto link -->
             <a href="mailto:thuong@phan.com">thuong@phan.com</a>
         </p>
+        <!-- Javadcript time & Style -->
+        <p id="time"
+            style="font-family: 'Courier New', monospace; font-size: 14px; color: white; text-align: center; background-color: #007B63 ; padding: 10px; border-radius: 5px;">
+            Current Time</p>
 
-        <!--Foot was straightforwar with a break tag-->
+        <script>
+            const d = new Date();
+            document.getElementById("time").innerHTML = d;
+        </script>
+
     </footer>
+
 </body>
 
 </html>
