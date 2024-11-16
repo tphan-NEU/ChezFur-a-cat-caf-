@@ -111,6 +111,14 @@ nav a:focus {
 
 }
 
+.catvid{   /*Adoptions Page cat video */
+  background-color: #191C2D;
+  padding:20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
 @media screen and (min-width: 1024px) {
   /* Nav for large screen*/
 
